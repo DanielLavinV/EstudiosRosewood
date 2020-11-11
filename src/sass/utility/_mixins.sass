@@ -1,0 +1,9 @@
+@mixin formatServiceOption($elementNo, $textColor, $bgColor)
+    .element#{$elementNo}.active
+        font-weight: 600
+        color: $textColor
+        background-color: $bgColor
+    .element#{$elementNo}
+        &:hover
+            color: $textColor
+            background-color: $bgColor
