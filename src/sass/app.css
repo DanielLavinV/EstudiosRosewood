@@ -6,20 +6,40 @@ html {
   margin-bottom: 1rem;
 }
 
+.container-fluid {
+  padding-left: 0;
+  padding-right: 0;
+}
+
 #logo-container img {
   width: 100%;
 }
 
-.services-navbar-container {
-  padding: 0;
+#blackwoods-section-container {
+  background-color: #292929;
+}
+
+#aymaria-section-container {
+  background-color: #f8aeb0;
+}
+
+#roes-section-container {
+  background-color: #e0c389;
+}
+
+#services-navbar-container {
   margin-bottom: 0;
 }
-.services-navbar-container .navbar-nav {
+#services-navbar-container .services-navbar-container {
+  padding: 0 !important;
+  margin-bottom: 0;
+}
+#services-navbar-container .services-navbar-container .navbar-nav {
   display: flex;
   width: 100%;
   justify-content: space-around;
 }
-.services-navbar-container .navbar-nav a {
+#services-navbar-container .services-navbar-container .navbar-nav a {
   color: #010101;
   padding: 0.5rem 0;
   font-size: 1.5rem;
@@ -27,32 +47,36 @@ html {
   text-align: center;
   width: 100%;
 }
-.services-navbar-container .navbar-nav .element0.active {
+#services-navbar-container .services-navbar-container .navbar-nav .element0.active {
   font-weight: 600;
   color: #ffffff;
-  background-color: #010101;
+  background-color: #292929;
 }
-.services-navbar-container .navbar-nav .element0:hover {
+#services-navbar-container .services-navbar-container .navbar-nav .element0:hover {
   color: #ffffff;
-  background-color: #010101;
+  background-color: #292929;
 }
-.services-navbar-container .navbar-nav .element1.active {
+#services-navbar-container .services-navbar-container .navbar-nav .element1.active {
   font-weight: 600;
   color: #ffffff;
   background-color: #e0c389;
 }
-.services-navbar-container .navbar-nav .element1:hover {
+#services-navbar-container .services-navbar-container .navbar-nav .element1:hover {
   color: #ffffff;
   background-color: #e0c389;
 }
-.services-navbar-container .navbar-nav .element2.active {
+#services-navbar-container .services-navbar-container .navbar-nav .element2.active {
   font-weight: 600;
   color: #ffffff;
   background-color: #f8aeb0;
 }
-.services-navbar-container .navbar-nav .element2:hover {
+#services-navbar-container .services-navbar-container .navbar-nav .element2:hover {
   color: #ffffff;
   background-color: #f8aeb0;
+}
+
+.service-logo img {
+  width: 40%;
 }
 
 /*# sourceMappingURL=app.css.map */
