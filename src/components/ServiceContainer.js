@@ -1,6 +1,9 @@
 import React from "react";
 import ServicePackage from "./ServicePackage";
 import ServiceLogo from "./ServiceLogo";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 
 class ServiceContainer extends React.Component {
   constructor(props) {
@@ -8,22 +11,38 @@ class ServiceContainer extends React.Component {
     this.props = props;
   }
 
-  renderServicePackages() {
+  renderServicePackages = () => {
     let servicePackageList = [];
     for (const servP of this.props.servicePackages) {
       servicePackageList.push(
-        <ServicePackage title={servP.title} body={servP.body} />
+        <ServicePackage
+          serviceName={this.props.serviceName}
+          title={servP.title}
+          body={servP.body}
+        />
       );
     }
     return servicePackageList;
-  }
+  };
 
   render() {
     return (
-      <div className="service-container">
-        <ServiceLogo src={this.props.logoSrc} />
-        {/* {renderServicePackages()} */}
-      </div>
+      <Container className="service-container">
+        <Row>
+          <Col></Col>
+          <Col md={6}>
+            <ServiceLogo src={this.props.logoSrc} />
+          </Col>
+          <Col></Col>
+        </Row>
+        <Row>
+          <Col>
+            <div className="service-packages-container">
+              {this.renderServicePackages()}
+            </div>
+          </Col>
+        </Row>
+      </Container>
     );
   }
 }

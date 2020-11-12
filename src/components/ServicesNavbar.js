@@ -45,7 +45,7 @@ class ServicesNavbar extends React.Component {
       <Navbar expand="lg" className="services-navbar-container">
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="mr-auto">{this.renderOptions()}</Nav>
+          <Nav>{this.renderOptions()}</Nav>
         </Navbar.Collapse>
       </Navbar>
     );

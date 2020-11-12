@@ -34,14 +34,19 @@ html {
   padding: 0 !important;
   margin-bottom: 0;
 }
+#services-navbar-container .services-navbar-container .navbar-collapse {
+  justify-content: space-around;
+}
 #services-navbar-container .services-navbar-container .navbar-nav {
   display: flex;
-  width: 100%;
+  width: 85%;
   justify-content: space-around;
 }
 #services-navbar-container .services-navbar-container .navbar-nav a {
   color: #010101;
-  padding: 0.5rem 0;
+  margin-right: 0.5rem;
+  margin-left: 0.5rem;
+  padding: 0.5rem 0.2rem;
   font-size: 1.5rem;
   text-decoration: none;
   text-align: center;
@@ -75,8 +80,57 @@ html {
   background-color: #f8aeb0;
 }
 
+.service-logo {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
 .service-logo img {
-  width: 40%;
+  width: 100%;
+}
+
+.service-packages-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.service-packages-container .service-package {
+  margin-bottom: 1rem;
+  display: block;
+}
+.service-packages-container .service-package-blackwoods {
+  color: #292929;
+  background-color: #e0c389;
+}
+.service-packages-container .service-package-roes {
+  color: #ffffff;
+  background-color: #292929;
+}
+.service-packages-container .service-package-aymaria {
+  background-color: #ffffff;
+}
+
+@media (max-width: 576px) {
+  html {
+    font-size: 35px;
+  }
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 35px;
+  }
+}
+@media (min-width: 992px) {
+  html {
+    font-size: 20px;
+  }
+}
+@media (min-width: 1200px) {
+  html {
+    font-size: 20px;
+  }
 }
 
 /*# sourceMappingURL=app.css.map */
