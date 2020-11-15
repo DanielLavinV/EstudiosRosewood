@@ -6,31 +6,26 @@ import Form from "react-bootstrap/Form";
 import FormControl from "react-bootstrap/FormControl";
 import Button from "react-bootstrap/Button";
 
-function NavBar() {
+function NavBar(props) {
   return (
-    <Navbar bg="light" expand="lg">
-      <Navbar.Brand href="#home">Estudio RoseWood</Navbar.Brand>
+    <Navbar id={props.id} sticky="top" expand="lg">
+      <Navbar.Brand href="#logo-container" className="d-xs-none d-sm-none d-md-none d-lg-block">
+      <img
+        src={props.imgSrc}
+        className="main-navbar-logo d-inline-block align-top"
+        alt="logo"
+      />
+      </Navbar.Brand>
+      <Navbar.Brand className="d-xs-block d-sm-block d-md-block d-lg-none">
+        Navegación
+      </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">
-          <Nav.Link href="#home">Home</Nav.Link>
-          <Nav.Link href="#link">Link</Nav.Link>
-          <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-            <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-            <NavDropdown.Item href="#action/3.2">
-              Another action
-            </NavDropdown.Item>
-            <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-            <NavDropdown.Divider />
-            <NavDropdown.Item href="#action/3.4">
-              Separated link
-            </NavDropdown.Item>
-          </NavDropdown>
+          <Nav.Link href="#logo-container">Inicio</Nav.Link>
+          <Nav.Link href="#services-container">Servicios</Nav.Link>
+          <Nav.Link href="#">Redes</Nav.Link>
         </Nav>
-        <Form inline>
-          <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-          <Button variant="outline-success">Search</Button>
-        </Form>
       </Navbar.Collapse>
     </Navbar>
   );

@@ -6,10 +6,16 @@ import ServicesNavbar from "./components/ServicesNavbar";
 import ServiceContainer from "./components/ServiceContainer";
 
 // file imports
-import EstudiosRWLogo from "./images/ROSEWOODROSA.png";
+// import EstudiosRWLogo from "./images/ROSEWOODROSA.png";
+// import EstudiosRWLogo from "./images/ROSEWOODSINMADERA.png";
+// import EstudiosRWLogo from "./images/ROSEWOODVERTICAL.png";
+import EstudiosRWLogo from "./images/ROSEWOODREDONDO.png";
 import BlackwoodsRecordsLogo from "./images/LOGOBLACKWOOD1.png";
 import ROESLogo from "./images/ROESFOTO.png";
 import AyMariaLogo from "./images/AyMariaLogo4.png";
+import Dorado from "./images/Dorado.jpg";
+import WoodTexture from "./images/textura_sample.jpg"
+import RosewoodFondoNegro from "./images/ROSEWOODROSAFONDONEGRO.png";
 
 //constants
 const SERVICE_NAME_ROES_PHOTOGRAPHY = "roes";
@@ -20,7 +26,7 @@ const SERVICE_NAME_AYMARIA_MAKEUP = "aymaria";
 function App() {
   return (
     <div id="container">
-      {/* <NavBar /> */}
+      <NavBar imgSrc={RosewoodFondoNegro} id="main-navbar"/>
       <SectionContainer id="logo-container" midColSize={8}>
         <Logo src={EstudiosRWLogo} />
       </SectionContainer>
@@ -53,20 +59,16 @@ function App() {
                   body:
                     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam\
                      condimentum, dolor eu mollis semper, eros ligula laoreet eros, \
-                     eget elementum mauris mi vel est. Integer ultricies elementum metus,\
-                     ac consectetur ligula aliquet ut. Aliquam lobortis urna ante, sed\
-                     pretium odio faucibus eu. Nam interdum tempor placerat. Cras bibendum,\
-                     urna in convallis tristique, erat lectus finibus metus.",
+                     eget elementum mauris mi vel est.",
+                  backgroundImg: WoodTexture,
                 },
                 {
                   title: "Paquete 2",
                   body:
                     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam\
                   condimentum, dolor eu mollis semper, eros ligula laoreet eros, \
-                  eget elementum mauris mi vel est. Integer ultricies elementum metus,\
-                  ac consectetur ligula aliquet ut. Aliquam lobortis urna ante, sed\
-                  pretium odio faucibus eu. Nam interdum tempor placerat. Cras bibendum,\
-                  urna in convallis tristique, erat lectus finibus metus.",
+                  eget elementum mauris mi vel est.",
+                  backgroundImg: WoodTexture,
                 },
               ]}
             />
@@ -75,31 +77,27 @@ function App() {
         <SectionContainer
           id={`${SERVICE_NAME_ROES_PHOTOGRAPHY}-section-container`}
           midColSize={12}
+          srcImg={WoodTexture}
         >
           <SectionContainer midColSize={8}>
             <ServiceContainer
               logoSrc={ROESLogo}
               serviceName={`${SERVICE_NAME_ROES_PHOTOGRAPHY}`}
+            
               servicePackages={[
                 {
                   title: "Paquete 1",
                   body:
                     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam\
                   condimentum, dolor eu mollis semper, eros ligula laoreet eros, \
-                  eget elementum mauris mi vel est. Integer ultricies elementum metus,\
-                  ac consectetur ligula aliquet ut. Aliquam lobortis urna ante, sed\
-                  pretium odio faucibus eu. Nam interdum tempor placerat. Cras bibendum,\
-                  urna in convallis tristique, erat lectus finibus metus.",
+                  eget elementum mauris mi vel est.",
                 },
                 {
                   title: "Paquete 2",
                   body:
                     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam\
                   condimentum, dolor eu mollis semper, eros ligula laoreet eros, \
-                  eget elementum mauris mi vel est. Integer ultricies elementum metus,\
-                  ac consectetur ligula aliquet ut. Aliquam lobortis urna ante, sed\
-                  pretium odio faucibus eu. Nam interdum tempor placerat. Cras bibendum,\
-                  urna in convallis tristique, erat lectus finibus metus.",
+                  eget elementum mauris mi vel est.",
                 },
               ]}
             />
@@ -119,20 +117,14 @@ function App() {
                   body:
                     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam\
                   condimentum, dolor eu mollis semper, eros ligula laoreet eros, \
-                  eget elementum mauris mi vel est. Integer ultricies elementum metus,\
-                  ac consectetur ligula aliquet ut. Aliquam lobortis urna ante, sed\
-                  pretium odio faucibus eu. Nam interdum tempor placerat. Cras bibendum,\
-                  urna in convallis tristique, erat lectus finibus metus.",
+                  eget elementum mauris mi vel est.",
                 },
                 {
                   title: "Paquete 2",
                   body:
                     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam\
                   condimentum, dolor eu mollis semper, eros ligula laoreet eros, \
-                  eget elementum mauris mi vel est. Integer ultricies elementum metus,\
-                  ac consectetur ligula aliquet ut. Aliquam lobortis urna ante, sed\
-                  pretium odio faucibus eu. Nam interdum tempor placerat. Cras bibendum,\
-                  urna in convallis tristique, erat lectus finibus metus.",
+                  eget elementum mauris mi vel est.",
                 },
               ]}
             />

@@ -9,6 +9,7 @@ class ServiceContainer extends React.Component {
   constructor(props) {
     super(props);
     this.props = props;
+    
   }
 
   renderServicePackages = () => {
@@ -16,9 +17,11 @@ class ServiceContainer extends React.Component {
     for (const servP of this.props.servicePackages) {
       servicePackageList.push(
         <ServicePackage
+          key={servP.title}
           serviceName={this.props.serviceName}
           title={servP.title}
           body={servP.body}
+          backgroundImg={servP.backgroundImg}
         />
       );
     }

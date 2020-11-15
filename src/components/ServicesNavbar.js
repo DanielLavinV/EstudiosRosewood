@@ -42,7 +42,7 @@ class ServicesNavbar extends React.Component {
 
   render() {
     return (
-      <Navbar expand="lg" className="services-navbar-container">
+      <Navbar expand="lg" className="services-navbar-container d-xs-none d-sm-none d-md-none d-lg-block">
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav>{this.renderOptions()}</Nav>

@@ -11,10 +11,19 @@ class SectionContainer extends React.Component {
 
   render() {
     return (
-      <Container fluid id={this.props.id} className="section-container">
+      <Container
+        fluid
+        style={
+          this.props.srcImg
+            ? { backgroundImage: `url(${this.props.srcImg})` }
+            : {}
+        }
+        id={this.props.id}
+        className="section-container"
+      >
         <Row>
           <Col></Col>
-          <Col md={this.props.midColSize} sm={12} >
+          <Col md={this.props.midColSize} sm={12}>
             {this.props.children}
           </Col>
           <Col></Col>

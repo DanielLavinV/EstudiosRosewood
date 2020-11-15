@@ -43,7 +43,8 @@ html {
   justify-content: space-around;
 }
 #services-navbar-container .services-navbar-container .navbar-nav a {
-  color: #010101;
+  border-radius: 0.8rem 0.8rem 0 0;
+  color: #292929;
   margin-right: 0.5rem;
   margin-left: 0.5rem;
   padding: 0.5rem 0.2rem;
@@ -80,6 +81,24 @@ html {
   background-color: #f8aeb0;
 }
 
+#main-navbar {
+  padding-top: 0;
+  padding-bottom: 0;
+  background-color: #292929;
+}
+#main-navbar a {
+  color: #ffffff;
+}
+#main-navbar .main-navbar-logo {
+  height: 2rem;
+  width: auto;
+  padding-top: 0.2rem;
+  margin-left: 1rem;
+}
+#main-navbar .navbar-brand {
+  color: #ffffff;
+}
+
 .service-logo {
   display: flex;
   justify-content: space-around;
@@ -97,6 +116,7 @@ html {
   flex-wrap: wrap;
 }
 .service-packages-container .service-package {
+  border-radius: 0.8rem;
   margin-bottom: 1rem;
   display: block;
 }

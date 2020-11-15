@@ -10,12 +10,18 @@ class ServicePackage extends React.Component {
 
   render() {
     return (
-      <Card style={{width: "20rem"}} className={`service-package service-package-${this.props.serviceName}`}>
+      <Card
+        style={{
+          width: "20rem",
+          backgroundImage: this.props.backgroundImg
+            ? `url(${this.props.backgroundImg})`
+            : "None",
+        }}
+        className={`service-package service-package-${this.props.serviceName}`}
+      >
         <Card.Body>
           <Card.Title>{this.props.title}</Card.Title>
-          <Card.Text>
-              {this.props.body}
-          </Card.Text>
+          <Card.Text>{this.props.body}</Card.Text>
         </Card.Body>
       </Card>
     );
