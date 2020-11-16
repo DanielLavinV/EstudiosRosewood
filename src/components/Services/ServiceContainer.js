@@ -28,9 +28,13 @@ class ServiceContainer extends React.Component {
     return servicePackageList;
   };
 
+  isActive(){
+    return this.props.isActive ? "active" : "";
+  }
+
   render() {
     return (
-      <Container className="service-container">
+      <Container className={"service-container "+this.isActive()}>
         <Row>
           <Col></Col>
           <Col md={6}>

@@ -13,7 +13,7 @@ class ServicesNavbar extends React.Component {
 
   handleClick = (index) => {
     this.setState({ activeItem: index });
-  }
+  };
 
   renderOptions() {
     let listItems = [];
@@ -28,9 +28,11 @@ class ServicesNavbar extends React.Component {
           key={opt}
           className={"element" + this.props.options.indexOf(opt)}
           style={{ width: `${100 / this.props.options.length}%` }}
-          isActive={this.state.activeItem === this.props.options.indexOf(opt)}
+          // isActive={this.state.activeItem === this.props.options.indexOf(opt)}
+          isActive={this.props.activeItem === this.props.options.indexOf(opt)}
           index={this.props.options.indexOf(opt)}
-          onClick={this.handleClick}
+          // onClick={this.handleClick}
+          onClick={this.props.onClick}
         >
           {opt}
         </ServiceOption>
@@ -42,7 +44,10 @@ class ServicesNavbar extends React.Component {
 
   render() {
     return (
-      <Navbar expand="lg" className="services-navbar-container d-xs-none d-sm-none d-md-none d-lg-block">
+      <Navbar
+        expand="lg"
+        className="services-navbar-container d-xs-none d-sm-none d-md-none d-lg-block"
+      >
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav>{this.renderOptions()}</Nav>
@@ -59,15 +64,20 @@ class ServiceOption extends React.Component {
   }
 
   handleClick = () => {
-    console.log("Clicked!")
     this.props.onClick(this.props.index);
-  }
+  };
 
   render() {
     return (
-      <a href="#" className={`${this.props.isActive ? "active" : ""} ${this.props.className}`} onClick={this.handleClick}>
+      <button
+        href="#"
+        className={`${this.props.isActive ? "active" : ""} ${
+          this.props.className
+        }`}
+        onClick={this.handleClick}
+      >
         {this.props.children}
-      </a>
+      </button>
     );
   }
 }

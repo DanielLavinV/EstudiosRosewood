@@ -17,14 +17,26 @@ html {
 
 #blackwoods-section-container {
   background-color: #292929;
+  margin-bottom: 0;
+}
+#blackwoods-section-container .section-container {
+  margin-bottom: 0;
 }
 
 #aymaria-section-container {
   background-color: #f8aeb0;
+  margin-bottom: 0;
+}
+#aymaria-section-container .section-container {
+  margin-bottom: 0;
 }
 
 #roes-section-container {
   background-color: #e0c389;
+  margin-bottom: 0;
+}
+#roes-section-container .section-container {
+  margin-bottom: 0;
 }
 
 #services-navbar-container {
@@ -39,10 +51,11 @@ html {
 }
 #services-navbar-container .services-navbar-container .navbar-nav {
   display: flex;
-  width: 85%;
+  width: 65%;
   justify-content: space-around;
 }
-#services-navbar-container .services-navbar-container .navbar-nav a {
+#services-navbar-container .services-navbar-container .navbar-nav button {
+  border: none;
   border-radius: 0.8rem 0.8rem 0 0;
   color: #292929;
   margin-right: 0.5rem;
@@ -52,6 +65,10 @@ html {
   text-decoration: none;
   text-align: center;
   width: 100%;
+}
+#services-navbar-container .services-navbar-container .navbar-nav button:focus {
+  outline: none;
+  outline-offset: none;
 }
 #services-navbar-container .services-navbar-container .navbar-nav .element0.active {
   font-weight: 600;
@@ -130,6 +147,13 @@ html {
 }
 .service-packages-container .service-package-aymaria {
   background-color: #ffffff;
+}
+
+#services-container .service-container {
+  display: none;
+}
+#services-container .service-container.active {
+  display: block;
 }
 
 @media (max-width: 576px) {

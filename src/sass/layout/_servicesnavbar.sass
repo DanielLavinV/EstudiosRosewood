@@ -9,9 +9,10 @@
             justify-content: space-around
         .navbar-nav
             display: flex
-            width: 85%
+            width: 65%
             justify-content: space-around
-            a
+            button
+                border: none
                 border-radius: 0.8rem 0.8rem 0 0
                 color: $themeColor5Hex
                 margin:
@@ -22,6 +23,9 @@
                 text-decoration: none
                 text-align: center
                 width: 100%
+                &:focus
+                    outline: none
+                    outline-offset: none
             @include formatServiceOption(0, $themeColor2Hex, $themeColor5Hex)
             @include formatServiceOption(1, $themeColor2Hex, $themeColor3Hex)
             @include formatServiceOption(2, $themeColor2Hex, $themeColor1Hex)
