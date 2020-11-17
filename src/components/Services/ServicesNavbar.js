@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
+import { NavbarBrand } from "react-bootstrap";
 
 class ServicesNavbar extends React.Component {
   constructor(props) {
@@ -19,24 +20,16 @@ class ServicesNavbar extends React.Component {
     let listItems = [];
     for (const opt of this.props.options) {
       listItems.push(
-        // <Nav.Link
-        //   key={opt}
-        //   className={"element" + this.props.options.indexOf(opt)}
-        //   style={{ width: `${100 / this.props.options.length}%` }}
-        // >
         <ServiceOption
           key={opt}
           className={"element" + this.props.options.indexOf(opt)}
           style={{ width: `${100 / this.props.options.length}%` }}
-          // isActive={this.state.activeItem === this.props.options.indexOf(opt)}
           isActive={this.props.activeItem === this.props.options.indexOf(opt)}
           index={this.props.options.indexOf(opt)}
-          // onClick={this.handleClick}
           onClick={this.props.onClick}
         >
           {opt}
         </ServiceOption>
-        // </Nav.Link>
       );
     }
     return listItems;
@@ -45,10 +38,16 @@ class ServicesNavbar extends React.Component {
   render() {
     return (
       <Navbar
+        collapseOnSelect
         expand="lg"
-        className="services-navbar-container d-xs-none d-sm-none d-md-none d-lg-block"
+        className="services-navbar-container"
       >
+        <div className="d-sm-block d-lg-none">
+        <Navbar.Brand>
+          Explorar
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        </div>
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav>{this.renderOptions()}</Nav>
         </Navbar.Collapse>

@@ -5,6 +5,7 @@ import Logo from "./components/Logo";
 import ServicesNavbar from "./components/Services/ServicesNavbar";
 import ServiceContainer from "./components/Services/ServiceContainer";
 import ServicesController from "./components/Services/ServicesController";
+import RedesContainer from "./components/RedesContainer";
 
 // file imports
 // import EstudiosRWLogo from "./images/ROSEWOODROSA.png";
@@ -17,6 +18,13 @@ import AyMariaLogo from "./images/AyMariaLogo4.png";
 import Dorado from "./images/Dorado.jpg";
 import WoodTexture from "./images/textura_sample.jpg";
 import RosewoodFondoNegro from "./images/ROSEWOODROSAFONDONEGRO.png";
+import NuevoLogoFotografia from "./images/1Afoto.png";
+import NuevoLogoRecords from "./images/1ARECORDS.png";
+
+//media icons
+import FacebookIcon from "./images/facebook.svg";
+import TwitterIcon from "./images/twitter.svg";
+import InstagramIcon from "./images/instagram.svg";
 
 //constants
 const SERVICE_NAME_ROES_PHOTOGRAPHY = "roes";
@@ -40,14 +48,14 @@ function App() {
         {/* parent container to pass info from navbar to service containers */}
         <ServicesController
           navbarOptions={[
-            "Blackwood's Records",
-            "Photography by ROES",
+            "Roes Records",
+            "Photography by Rosewood",
             "Makeup by #AYMARIA",
           ]}
           services={[
             {
               sectionContainerId: `${SERVICE_NAME_BLACKWOODS_RECORDS}-section-container`,
-              logoSrc: BlackwoodsRecordsLogo,
+              logoSrc: NuevoLogoRecords,
               name: SERVICE_NAME_BLACKWOODS_RECORDS,
               packages: [
                 {
@@ -65,7 +73,7 @@ function App() {
             {
               sectionContainerId: `${SERVICE_NAME_ROES_PHOTOGRAPHY}-section-container`,
               backgroundImg: WoodTexture,
-              logoSrc: ROESLogo,
+              logoSrc: NuevoLogoFotografia,
               name: SERVICE_NAME_ROES_PHOTOGRAPHY,
               packages: [
                 {
@@ -95,6 +103,30 @@ function App() {
             },
           ]}
         />
+      </SectionContainer>
+      <SectionContainer id="redes-container" midColSize={8}>
+        <RedesContainer mediaList={
+          [
+            {
+              url: "https://www.facebook.com/",
+              imgSrc: FacebookIcon
+            },
+            {
+              url: "https://www.twitter.com/",
+              imgSrc: TwitterIcon
+            },
+            {
+              url: "https://www.instagram.com/",
+              imgSrc: InstagramIcon
+            }
+          ]
+        } />
+      </SectionContainer>
+      <SectionContainer id="footer-container" midColSize={12}>
+        <div className="footer">
+          <p>Diseño web por:</p>
+          <a>Daniel Lavín</a>
+        </div>
       </SectionContainer>
     </div>
   );

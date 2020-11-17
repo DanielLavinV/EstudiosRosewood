@@ -8,7 +8,7 @@ import Button from "react-bootstrap/Button";
 
 function NavBar(props) {
   return (
-    <Navbar id={props.id} sticky="top" expand="lg">
+    <Navbar collapseOnSelect id={props.id} sticky="top" expand="lg">
       <Navbar.Brand href="#logo-container" className="d-xs-none d-sm-none d-md-none d-lg-block">
       <img
         src={props.imgSrc}
@@ -24,7 +24,7 @@ function NavBar(props) {
         <Nav className="mr-auto">
           <Nav.Link href="#logo-container">Inicio</Nav.Link>
           <Nav.Link href="#services-container">Servicios</Nav.Link>
-          <Nav.Link href="#">Redes</Nav.Link>
+          <Nav.Link href="#redes-container">Redes</Nav.Link>
         </Nav>
       </Navbar.Collapse>
     </Navbar>
