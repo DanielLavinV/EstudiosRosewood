@@ -11,20 +11,22 @@ import RedesContainer from "./components/RedesContainer";
 // import EstudiosRWLogo from "./images/ROSEWOODROSA.png";
 // import EstudiosRWLogo from "./images/ROSEWOODSINMADERA.png";
 // import EstudiosRWLogo from "./images/ROSEWOODVERTICAL.png";
-import EstudiosRWLogo from "./images/ROSEWOODREDONDO.png";
+// import EstudiosRWLogo from "./images/ROSEWOODREDONDO.png";
+import EstudiosRWLogo from "./images/rosewoodlogofinal.png";
 import BlackwoodsRecordsLogo from "./images/LOGOBLACKWOOD1.png";
 import ROESLogo from "./images/ROESFOTO.png";
 import AyMariaLogo from "./images/AyMariaLogo4.png";
 import Dorado from "./images/Dorado.jpg";
 import WoodTexture from "./images/textura_sample.jpg";
 import RosewoodFondoNegro from "./images/ROSEWOODROSAFONDONEGRO.png";
-import NuevoLogoFotografia from "./images/1Afoto.png";
+// import NuevoLogoFotografia from "./images/1Afoto.png";
+import NuevoLogoFotografia from "./images/fotologofinal.png";
 import NuevoLogoRecords from "./images/1ARECORDS.png";
 
 //media icons
-import FacebookIcon from "./images/facebook.svg";
-import TwitterIcon from "./images/twitter.svg";
-import InstagramIcon from "./images/instagram.svg";
+import FacebookIcon from "./images/facebook-bw.svg";
+import WhatsappIcon from "./images/whatsapp-bw.svg";
+import InstagramIcon from "./images/instagram-bw.svg";
 
 //constants
 const SERVICE_NAME_ROES_PHOTOGRAPHY = "roes";
@@ -112,8 +114,9 @@ function App() {
               imgSrc: FacebookIcon
             },
             {
-              url: "https://www.twitter.com/",
-              imgSrc: TwitterIcon
+              url: "javascript:void(0);",
+              imgSrc: WhatsappIcon,
+              id: "whatsapp-icon"
             },
             {
               url: "https://www.instagram.com/",

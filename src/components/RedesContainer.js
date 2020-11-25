@@ -12,13 +12,32 @@ class RedesContainer extends React.Component {
   renderMedia() {
     let mediaList = [];
     for (const media of this.props.mediaList) {
-      mediaList.push(
-        <a key={this.props.mediaList.indexOf(media)} href={media.url} target="_blank">
-          <img src={media.imgSrc}></img>
-        </a>
-      );
+      if (!media.id) {
+        mediaList.push(
+          <a
+            key={this.props.mediaList.indexOf(media)}
+            href={media.url}
+            target="_blank"
+          >
+            <img className="filter-red" src={media.imgSrc}></img>
+          </a>
+        );
+      }
     }
     return mediaList;
+  }
+
+  renderWhatsapp() {
+    for(const media of this.props.mediaList) {
+      if(media.id){
+        return(
+          <div className="whatsapp">
+            <img className="filter-red" src={media.imgSrc}></img>
+            <h4>+5255545000</h4>
+          </div>
+        );
+      }
+    }
   }
 
   render() {
@@ -28,16 +47,14 @@ class RedesContainer extends React.Component {
           <Col sm={12} lg={6}>
             <div className="correo">
               <h4>Escríbenos a:</h4>
-              <br></br>
               <h4>correo@correo.com</h4>
+              {this.renderWhatsapp()}
             </div>
           </Col>
           <Col sm={12} lg={6}>
             <div className="redes">
               <h4>Síguenos en redes:</h4>
-              <div className="redes-iconos">
-                  {this.renderMedia()}
-              </div>
+              <div className="redes-iconos">{this.renderMedia()}</div>
             </div>
           </Col>
         </Row>

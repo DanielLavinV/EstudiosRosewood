@@ -21,7 +21,7 @@ function NavBar(props) {
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
-        <Nav className="mr-auto">
+        <Nav>
           <Nav.Link href="#logo-container">Inicio</Nav.Link>
           <Nav.Link href="#services-container">Servicios</Nav.Link>
           <Nav.Link href="#redes-container">Redes</Nav.Link>

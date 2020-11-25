@@ -10,6 +10,9 @@ html {
   padding: 0 0;
 }
 
+#logo-container {
+  padding-bottom: 3rem;
+}
 #logo-container img {
   width: 100%;
 }
@@ -23,6 +26,9 @@ html {
 }
 #blackwoods-section-container .section-container {
   margin-bottom: 0;
+}
+#blackwoods-section-container .card-text {
+  font-weight: 500;
 }
 
 #aymaria-section-container {
@@ -108,6 +114,12 @@ html {
   padding-bottom: 0;
   background-color: #373535;
 }
+#main-navbar .navbar-collapse {
+  justify-content: flex-end;
+}
+#main-navbar .navbar-collapse .navbar-nav {
+  align-items: right;
+}
 #main-navbar a {
   color: #ffffff;
 }
@@ -122,20 +134,36 @@ html {
 }
 
 #redes-container {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
   color: #373535;
 }
 #redes-container .correo, #redes-container .redes {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center;
 }
-#redes-container .redes-iconos {
+#redes-container .correo {
+  padding-left: 2rem;
+  align-items: flex-start;
+}
+#redes-container .redes {
+  padding-right: 2rem;
+  align-items: flex-end;
+}
+#redes-container .redes-iconos, #redes-container .whatsapp {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+}
+#redes-container .redes-iconos .filter-red, #redes-container .whatsapp .filter-red {
+  filter: invert(51%) sepia(67%) saturate(7175%) hue-rotate(338deg) brightness(93%) contrast(100%);
+}
+#redes-container .redes-iconos img, #redes-container .whatsapp img {
+  width: 2rem;
 }
 #redes-container .redes-iconos img {
-  margin: 1rem;
+  margin: 1rem 0 1rem 1rem;
   width: 2rem;
 }
 
@@ -195,6 +223,7 @@ html {
 
 #services-container .service-container {
   display: none;
+  padding-bottom: 4rem;
 }
 #services-container .service-container.active {
   display: block;

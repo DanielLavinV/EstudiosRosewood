@@ -37,7 +37,7 @@ class ServiceContainer extends React.Component {
       <Container className={"service-container "+this.isActive()}>
         <Row>
           <Col></Col>
-          <Col md={6}>
+          <Col md={6} sm={12}>
             <ServiceLogo src={this.props.logoSrc} />
           </Col>
           <Col></Col>

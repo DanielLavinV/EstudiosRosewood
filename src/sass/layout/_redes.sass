@@ -1,13 +1,29 @@
 #redes-container
+    padding:
+        top: 2rem
+        bottom: 2rem
     color: $themeColor5Hex
     .correo, .redes
         display: flex
         flex-direction: column
         justify-content: space-between
-        align-items: center
-    .redes-iconos
+    .correo
+        padding:
+            left: 2rem
+        align-items: flex-start
+    .redes
+        padding:
+            right: 2rem
+        align-items: flex-end
+    .redes-iconos,.whatsapp
         display: flex
         flex-direction: row
+        justify-content: space-between
+        .filter-red
+            filter: invert(51%) sepia(67%) saturate(7175%) hue-rotate(338deg) brightness(93%) contrast(100%)
         img
-            margin: 1rem
+            width: 2rem
+    .redes-iconos
+        img
+            margin: 1rem 0 1rem 1rem
             width: 2rem
