@@ -27,9 +27,6 @@ html {
 #blackwoods-section-container .section-container {
   margin-bottom: 0;
 }
-#blackwoods-section-container .card-text {
-  font-weight: 500;
-}
 
 #aymaria-section-container {
   background-color: #f8aeb0;
@@ -201,16 +198,59 @@ html {
 .service-packages-container {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
   flex-wrap: wrap;
+  align-items: flex-start;
 }
 .service-packages-container .service-package {
   border-radius: 0.8rem;
   margin-bottom: 1rem;
   display: block;
+  margin: 0.5rem;
+  padding: 0rem;
+  min-width: 10rem;
+}
+.service-packages-container .service-package .card-body {
+  padding: 1rem;
+}
+.service-packages-container .service-package .card-body .extra-text {
+  padding-top: 0.2rem;
+  font-weight: 700;
+}
+.service-packages-container .service-package p {
+  padding: 0 0 0 0.2rem;
+  margin: 0 0 0.2rem 0;
+}
+.service-packages-container .service-package ul {
+  list-style-type: none;
+  margin-bottom: 0;
+  padding-left: 0.2rem;
+}
+.service-packages-container .service-package ul li {
+  border-top: 0.1rem solid;
+  margin-bottom: 0.2rem;
+  padding-left: 0.4rem;
+}
+.service-packages-container .service-package ul .not-included {
+  font-weight: normal;
+  color: rgba(255, 255, 255, 0.6);
+}
+.service-packages-container .service-package .card-title {
+  font-size: 1.5rem;
+  padding-left: 0.3rem;
+  margin-bottom: 0.5rem;
+}
+.service-packages-container .service-package .package-price {
+  padding-left: 0.3rem;
+  margin-bottom: 0.75rem;
+}
+.service-packages-container .service-package .card-text {
+  padding-right: 0.3rem;
+  line-height: 1.25rem;
+  margin-bottom: 0;
 }
 .service-packages-container .service-package-blackwoods {
-  color: #373535;
+  color: #ffffff;
   background-color: #e0c389;
 }
 .service-packages-container .service-package-roes {
@@ -219,6 +259,9 @@ html {
 }
 .service-packages-container .service-package-aymaria {
   background-color: #ffffff;
+}
+.service-packages-container .service-package .card-title {
+  font-size: 1.5rem;
 }
 
 #services-container .service-container {

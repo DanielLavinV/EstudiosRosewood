@@ -61,13 +61,50 @@ function App() {
               name: SERVICE_NAME_BLACKWOODS_RECORDS,
               packages: [
                 {
-                  title: "Paquete 1",
-                  body: PLACEHOLDER_PACKAGE_TEXT,
+                  title: "Paquete Lockout",
+                  body:
+                  <>
+                  <p className={'extra-text'}>Incluye:</p>
+                  <ul>
+                    <li>Lockout de 4 horas</li>
+                    <li>Cabina individual</li>
+                    <li>Micrófonos</li>
+                  </ul>
+                  </>,
+                  price: "$1,000 MXN",
                   backgroundImg: WoodTexture,
                 },
                 {
-                  title: "Paquete 2",
-                  body: PLACEHOLDER_PACKAGE_TEXT,
+                  title: "Paquete Post",
+                  price: "$2,000 MXN",
+                  body:
+                  <>
+                  <p className={'extra-text'}>Incluye:</p>
+                  <ul>
+                    <li>Mezcla y masterización</li>
+                  </ul>
+                  </>,
+                  backgroundImg: WoodTexture,
+                },
+                {
+                  title: "Paquete Acústico",
+                  price: "$3,000 MXN",
+                  body:
+                  <>
+                  <p className={'extra-text'}>Incluye:</p>
+                  <ul>
+                    <li>Grabación de 1 tema con 3 instrumentos</li>
+                    <li>Lockout de 8 horas</li>
+                    <li>Mezcla y masterización</li>
+                    <li className={"not-included"}>No incluye arreglos</li>
+                  </ul>
+                  </>,
+                  backgroundImg: WoodTexture,
+                },
+                {
+                  title: "Paquete Personalizado",
+                  price: "Contáctanos :)",
+                  body:"",
                   backgroundImg: WoodTexture,
                 },
               ],
@@ -79,12 +116,54 @@ function App() {
               name: SERVICE_NAME_ROES_PHOTOGRAPHY,
               packages: [
                 {
-                  title: "Paquete 1",
-                  body: PLACEHOLDER_PACKAGE_TEXT,
+                  title: "Paquete Book",
+                  price: "$3,000 MXN",
+                  body:
+                  <>
+                  <p className={'extra-text'}>Incluye:</p>
+                  <ul>
+                    <li>Sesión de 4 horas en estudio</li>
+                    <li>Maquillaje natural</li>
+                    <li>Peinado sencillo</li>
+                    <li>Retoques</li>
+                    <li>4 cambios de ropa</li>
+                    <li>30 fotos editadas</li>
+                    <li>Posibilidad de sesión en pareja</li>
+                  </ul>
+                  </>,
                 },
                 {
-                  title: "Paquete 2",
-                  body: PLACEHOLDER_PACKAGE_TEXT,
+                  title: "Paquete Exterior",
+                  price: "$4,000 MXN",
+                  body:
+                  <>
+                  <p className={'extra-text'}>Incluye:</p>
+                  <ul>
+                    <li>Sesión de 5 horas en exterior</li>
+                    <li>Maquillaje natural</li>
+                    <li>Peinado sencillo</li>
+                    <li>Retoques</li>
+                    <li>4 cambios de ropa</li>
+                    <li>30 fotos editadas</li>
+                    <li>Posibilidad de sesión en pareja</li>
+                  </ul>
+                  </>,
+                },
+                {
+                  title: "Cotización personalizada",
+                  price: "Contáctanos :)",
+                  body:
+                  <>
+                  <p className={'extra-text'}>Eventos como:</p>
+                  <ul>
+                    <li>Bodas</li>
+                    <li>XV's</li>
+                    <li>Conferencias</li>
+                    <li>Videoclips</li>
+                    <li>Livesession</li>
+                    <li>Etc.</li>
+                  </ul>
+                  </>,
                 },
               ],
             },
@@ -94,12 +173,55 @@ function App() {
               name: SERVICE_NAME_AYMARIA_MAKEUP,
               packages: [
                 {
-                  title: "Paquete 1",
-                  body: PLACEHOLDER_PACKAGE_TEXT,
+                  title: "Paquete Novia",
+                  price: "$6,500 MXN",
+                  body: 
+                  <>
+                    {/* <p className={'extra-text'}>Cita 1: Prueba para novia</p>
+                      <ul>
+                        <li>Maquillaje para novia con aerógrafo</li>
+                        <li>Alto peinado (1-2 pruebas)</li>
+                        <li>Se realiza de 5 a 20 días antes de la boda</li>
+                        <li>Se recomienda tener velo y tiara</li>
+                      </ul>
+                    <p className={'extra-text'}>Cita 2: Día de la boda</p>
+                      <ul>
+                        <li>Maquillaje para novia con aerógrafo</li>
+                        <li>Alto peinado con aplicación de tiara y/o velo</li>
+                        <li>Labial de regalo para retoques</li>
+                      </ul>
+                    <p className={'extra-text'}>Incluye:</p>
+                      <ul>
+                        <li>Mascarilla y uñas postizas</li>
+                      </ul> */}
+                    <p className={'extra-text'}>Incluye:</p>
+                      <ul>
+                        <li>Cita 1: prueba para novia</li>
+                        <li>Cita 2: el día de la boda</li>
+                        <li>Maquillaje con aerógrafo</li>
+                        <li>Alto peinado con tiara y/o velo</li>
+                        <li>Mascarilla</li>
+                        <li>Diseño de cejas</li>
+                        <li>Pestañas de tira</li>
+                      </ul>
+                  </>,
                 },
                 {
-                  title: "Paquete 2",
-                  body: PLACEHOLDER_PACKAGE_TEXT,
+                  title: "Paquete Fiesta",
+                  price: "$2,000 MXN",
+                  body:   
+                  <>
+                  <p className={'extra-text'}>Incluye:</p>
+                    <ul>
+                      <li>Cita 1: prueba para novia</li>
+                      <li>Cita 2: el día de la boda</li>
+                      <li>Maquillaje con aerógrafo</li>
+                      <li>Alto peinado con tiara y/o velo</li>
+                      <li>Mascarilla</li>
+                      <li>Diseño de cejas</li>
+                      <li>Pestañas de tira</li>
+                    </ul>
+                  </>,
                 },
               ],
             },

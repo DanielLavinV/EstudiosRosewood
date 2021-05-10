@@ -12,7 +12,7 @@ class ServicePackage extends React.Component {
     return (
       <Card
         style={{
-          width: "20rem",
+          width: `${this.props.maxWidth}%`,
           backgroundImage: this.props.backgroundImg
             ? `url(${this.props.backgroundImg})`
             : "None",
@@ -21,6 +21,7 @@ class ServicePackage extends React.Component {
       >
         <Card.Body>
           <Card.Title>{this.props.title}</Card.Title>
+          <h5 className={"package-price"}>{this.props.price}</h5>
           <Card.Text>{this.props.body}</Card.Text>
         </Card.Body>
       </Card>

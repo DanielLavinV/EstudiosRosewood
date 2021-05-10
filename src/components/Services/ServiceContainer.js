@@ -14,18 +14,28 @@ class ServiceContainer extends React.Component {
 
   renderServicePackages = () => {
     let servicePackageList = [];
+    // let width = 90 / this.props.servicePackages.length
+    let width = 95
     for (const servP of this.props.servicePackages) {
       servicePackageList.push(
+        <Col>
         <ServicePackage
           key={servP.title}
+          maxWidth={width}
           serviceName={this.props.serviceName}
           title={servP.title}
+          price={servP.price}
           body={servP.body}
           backgroundImg={servP.backgroundImg}
         />
+        </Col>
       );
     }
-    return servicePackageList;
+    return (
+      <Row>
+        {servicePackageList}
+      </Row>
+    );
   };
 
   isActive(){
@@ -37,7 +47,7 @@ class ServiceContainer extends React.Component {
       <Container className={"service-container "+this.isActive()}>
         <Row>
           <Col></Col>
-          <Col md={6} sm={12}>
+          <Col lg={6} sm={12}>
             <ServiceLogo src={this.props.logoSrc} />
           </Col>
           <Col></Col>

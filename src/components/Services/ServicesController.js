@@ -43,7 +43,7 @@ class ServicesController extends React.Component {
           midColSize={12}
         >
           <SectionContainer
-            midColSize={8}
+            midColSize={10}
           >
             <ServiceContainer 
               logoSrc={serv.logoSrc}
